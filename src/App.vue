@@ -1,19 +1,29 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div>
+    <h1>App 组件</h1>
+    <p>测试适配</p>
+    <div class="box">
+        The box
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+<script>
+export default {
+
+}
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+    /*引入其他混合函数文件 */
+    @import "./common/stylus/mixins.styl"
+    p
+        width 200px
+        height 100px
+        background green
+    .box
+        width 150px
+        height 64px
+        background red
+
 </style>

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="./reset.css">  
+    <title>MyShop</title>
   </head>
   <body>
     <noscript>
@@ -13,5 +14,38 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!-- 手动适配设置根结点字体 -->
+    <!-- <script type="text/javascript">
+      function remRefresh() {
+        // 1. 获取屏幕宽度
+        let clientWidth = document.documentElement.clientWidth;
+        // 2. 将屏幕的宽度等分：10等分 ；等分目的：1) 降低单位rem值的大小便于换算 2) 提高精确度
+        let rem = clientWidth / 10;
+        // 3. 设置根结点字体大小
+        document.documentElement.style.fontSize = rem + 'px';
+        // 4. 设置body字体的大小
+        document.body.style.fontSize = '16px'
+      } 
+
+      // 页面加载显示的事件 dom2事件
+      window.addEventListener('pageshow', () => {
+        remRefresh()
+      })
+
+      // 窗口大小改变的事件及函数防抖
+      let timeoutId
+      window.addEventListener('resize', () => {
+        // 函数防抖
+        // 两个叹号将timeoutId转为字符串
+        !!timeoutId && clearTimeout(timeoutId)
+        timeoutId = setTimeout(() => {
+          console.log('resize');
+          remRefresh()
+        }, 300)
+        console.log(timeoutId)
+      })
+    </script> -->
+
   </body>
 </html>
