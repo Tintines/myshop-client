@@ -1,15 +1,21 @@
 <template>
   <div>
-    <h1>App 组件</h1>
-    <p>测试适配</p>
-    <div class="box">
-        The box
-    </div>
+    <!-- 添加路由显示标签 -->
+    <router-view></router-view>
+    <!-- 添加FooterGuide组件 -->
+    <FooterGuide></FooterGuide>
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
+import FooterGuide from '@/components/FooterGuide/FooterGuide.vue'
+
 export default {
+
+  // 引入并局部注册FooterGuide组件
+  components: {
+    FooterGuide
+  }
 
 }
 </script>
