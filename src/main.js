@@ -1,13 +1,18 @@
 /* 入口文件 */
 import Vue from 'vue'
-import App from './App.vue'
 // 引入适配文件
 import 'lib-flexible'
+
+import App from './App.vue'
+import Header from './components/Header/Header.vue'
 // 引入路由器
 import router from './router'
 // import store from './store'
 
 Vue.config.productionTip = false
+
+// 注册全局组件
+Vue.component('Header', Header)
 
 // console.log('zhaojing')
 new Vue({

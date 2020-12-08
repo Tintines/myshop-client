@@ -7,7 +7,7 @@ import MSite from '@/pages/MSite/MSite.vue'
 import Search from '@/pages/Search/Search.vue'
 import Order from '@/pages/Order/Order.vue'
 import Profile from '@/pages/Profile/Profile.vue'
-import Login from '@/pages/Login/Login.vue'
+import Login from '@/pages/Login/Login.vue' // 引入登陆注册路由
 
 export default [
   {
@@ -25,21 +25,21 @@ export default [
     }
   },
   {
-    path: '/Order',
+    path: '/order',
     component: Order,
     meta: {
 
     }
   },
   {
-    path: '/Profile',
+    path: '/profile',
     component: Profile,
     meta: {
 
     }
   },
   {
-    path: '/Login',
+    path: '/login',
     component: Login,
     meta: {
 
