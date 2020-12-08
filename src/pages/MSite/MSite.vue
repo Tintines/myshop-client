@@ -374,7 +374,7 @@ import 'swiper/css/swiper.css'
 
 export default {
   mounted () {
-    // swiper对象必须要在列表数据显示之后创建
+    // swiper对象必须要在列表数据显示之后创建  添加以下一行绕过规则检测
     /* eslint-disable no-new */
     new Swiper('.swiper-container', {
       loop: true, // 循环模式选项

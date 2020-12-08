@@ -270,3 +270,34 @@ export default {
 ```
 
 
+### 开启eslint检测后提示new对象错误
+
+Do not use 'new' for side effects
+
+方法一
+
+在错误地方上加/ eslint-disable no-new /绕过规则检测
+```
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+```
+
+方法二
+
+替代用法
+```
+let vm = new Vue({
+  router,
+  el: '#app',
+  render: h => h(App)
+})
+
+Vue.use({
+  vm
+})
+```
